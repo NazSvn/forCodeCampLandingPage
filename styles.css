@@ -95,13 +95,15 @@ a:active {
 #header-img {
   height: 100%;
 }
-
+.icon-logo {
+  display: none;
+}
 .hero-container {
   background-image: url('newhero1.png');
   background-size: cover;
   background-position: center;
   color: #fff;
-  height: 90vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -133,7 +135,10 @@ a:active {
   margin: 0 auto;
   letter-spacing: 0.2rem;
 }
-
+#products {
+  height: 100dvh;
+  align-content: center;
+}
 .reel-container {
   display: flex;
   flex-direction: row;
@@ -181,8 +186,9 @@ a:active {
   margin-top: 6px;
 }
 
-.about-section {
-  height: 400px;
+#about {
+  margin-top: 50px;
+  height: 100dvh;
   align-content: center;
 }
 
@@ -201,9 +207,9 @@ a:active {
 
 .video-container {
   width: 530px;
+  max-width: 100dvw;
   height: 300px;
-  margin: 0 auto 30px auto;
-  border: 1px solid #ccc;
+  margin: 50px auto;
 }
 
 #video {
@@ -212,7 +218,7 @@ a:active {
 }
 
 .newsletter-section {
-  height: 300px;
+  height: 50dvh;
   align-content: center;
 }
 
@@ -326,7 +332,7 @@ footer {
 
 @media all and (max-width: 920px) {
   .hero-container {
-    margin-bottom: 90px;
+    margin-bottom: 120px;
   }
   .hero {
     max-width: 60%;
@@ -351,5 +357,46 @@ footer {
   .shop-button {
     margin: 0 auto;
     font-size: 1rem;
+  }
+
+  #products {
+    height: fit-content;
+    margin: 60px auto;
+  }
+  .reel-container {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .reel-img-div {
+    position: relative;
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 5px;
+  }
+  .reel-img-div img {
+    border-radius: 5px;
+  }
+  .line-logo {
+    display: none;
+  }
+  .icon-logo {
+    display: inline-block;
+  }
+  .header-logo {
+    height: 50px;
+  }
+
+  .reel-img-div:hover img {
+    border-radius: 5px;
+    top: -5;
+    left: -5;
+    width: 110%;
+    height: 110%;
+    z-index: 2;
+    box-shadow: 0px 5px 10px 2px hsla(0, 0%, 0%, 0.74);
   }
 }
