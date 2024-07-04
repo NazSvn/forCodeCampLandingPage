@@ -8,6 +8,10 @@
 :root {
   --heads: 'Lora', serif;
   --textfont: 'Roboto', sans-serif;
+  --primary-bg: hsl(0, 0%, 100%);
+  --primary-color: hsl(0, 0%, 0%);
+  --hover-bg: hsla(0, 2%, 88%, 0.795);
+  --footer-bg: hsl(0, 3%, 15%);
 }
 
 body {
@@ -29,7 +33,7 @@ input {
   border-radius: 4px;
   border: none;
   background-color: hsla(0, 0%, 100%, 0.938);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
   margin-bottom: 10px;
   font-family: var(--textfont);
 }
@@ -46,7 +50,7 @@ input:hover {
   right: 0;
   height: 100px;
   z-index: 5;
-  background-color: #fff;
+  background-color: var(--primary-bg);
   display: flex;
   align-items: center;
 }
@@ -66,24 +70,20 @@ input:hover {
   width: 25%;
 }
 
-.nav-link a {
-  padding: 10px 15px;
-}
-
 a,
 a:link,
 a:visited {
-  color: black;
+  color: var(--primary-color);
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.3s ease, font-size 0.3s ease, color 0.3s ease,
+  transition: all 0.3s ease,
     padding 1s ease;
 }
 
 a:hover,
 a:active {
   border-radius: 5px;
-  background-color: rgba(224, 223, 223, 0.795);
+  background-color: var(--hover-bg);
   font-size: 1.1rem;
 }
 
@@ -95,14 +95,16 @@ a:active {
 #header-img {
   height: 100%;
 }
+
 .icon-logo {
   display: none;
 }
+
 .hero-container {
-  background-image: url('newhero1.png');
+  background-image: url('./assets/newhero1.png');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: var(--primary-bg);
   height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -135,10 +137,12 @@ a:active {
   margin: 0 auto;
   letter-spacing: 0.2rem;
 }
+
 #products {
   height: 100dvh;
   align-content: center;
 }
+
 .reel-container {
   display: flex;
   flex-direction: row;
@@ -177,7 +181,7 @@ a:active {
   position: absolute;
   bottom: -10px;
   text-align: center;
-  color: white;
+  color: var(--primary-bg);
   font-size: 1.2rem;
 }
 
@@ -245,21 +249,21 @@ a:active {
 
 .newsletter #submit {
   background-color: hsla(0, 10%, 79%, 0.664);
-  color: #0a0a0aa6;
+  color: hsla(0, 0%, 4%, 0.651);
 }
 
 .newsletter #email {
-  border: 2px solid black;
+  border: 2px solid var(--primary-color);
 }
 
 .newsletter #submit:hover {
   background-color: hsl(0, 9%, 83%);
-  color: rgba(0, 0, 0, 0.801);
+  color: hsla(0, 0%, 0%, 0.801);
 }
 
 footer {
-  background-color: hsl(0, 3%, 15%);
-  color: #fff;
+  background-color: var(--footer-bg);
+  color: var(--primary-bg);
   padding: 20px 0;
 }
 
@@ -300,13 +304,13 @@ footer {
 }
 
 .footer-section ul li a {
-  color: #fff;
+  color: var(--primary-bg);
   text-decoration: none;
 }
 
 .footer-section a:hover {
   padding: 5px;
-  color: black;
+  color: var(--primary-color);
 }
 
 .social-links i {
@@ -334,6 +338,7 @@ footer {
   .hero-container {
     margin-bottom: 120px;
   }
+
   .hero {
     max-width: 60%;
     margin: auto;
@@ -354,6 +359,7 @@ footer {
     font-size: 1rem;
     margin-bottom: 30px;
   }
+
   .shop-button {
     margin: 0 auto;
     font-size: 1rem;
@@ -363,6 +369,7 @@ footer {
     height: fit-content;
     margin: 60px auto;
   }
+
   .reel-container {
     display: flex;
     flex-direction: row;
@@ -377,15 +384,19 @@ footer {
     min-height: 300px;
     border-radius: 5px;
   }
+
   .reel-img-div img {
     border-radius: 5px;
   }
+
   .line-logo {
     display: none;
   }
+
   .icon-logo {
     display: inline-block;
   }
+
   .header-logo {
     height: 50px;
   }
